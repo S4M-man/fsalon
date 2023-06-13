@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+/* Header/Blog Title */
+.header {
+  padding: 0px;
+  text-align: center;
+  background: white;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 0px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 0px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #e9c362;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #030303;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(70, 69, 69);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(79, 70, 5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(250, 249, 249);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(196, 196, 115);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(246, 255, 147);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 10px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(171, 151, 92);
+   color: white;
+   text-align: center;
+}
+
+
+/*tidak dipakai
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #a35d5d;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(157, 140, 140);
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.my-float{
+	margin-top:16px;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.new {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  font-weight: 900;
+  background: conic-gradient(
+    #dff2ae 0 25%,
+    #ff904f 25% 50%,
+    #feefe7 50% 75%,
+    #ffde2b 75%
+  );
+  background-size: 200% 200%;
+  animation: animateBackground 4.5s ease-in-out infinite;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes animateBackground {
+  25% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.uiverse-btn {
+  /* btn background */
+  --btn_bg: #ff6e77;
+  --btn_hover_bg: #fff;
+  /* btn border */
+  --btn_border_width: 0.125em;
+  --btn_border_color: #3F3F3F;
+  --btn_border_radius: 0.1875em;
+  /* btn text */
+  --btn_text_color: var(--btn_hover_bg);
+  --btn_hover_text_color: var(--btn_border_color);
+  --btn_letter_spacing: 0.0625em;
+  /* btn font */
+  --btn_font_size: 16px;
+  --btn_font_weight: bold;
+  --btn_font_family: Menlo, Roboto Mono, monospace;
+  /* btn transition */
+  --btn-transition: .3s cubic-bezier(0.75, 0, 0.125, 1);
+  /* btn padding */
+  --btn_padding_x: 1.875em;
+  --btn_padding_y: 0.75em;
+}
+
+.uiverse-btn {
+  box-sizing: border-box;
+  color: var(--btn_text_color);
+  border: none;
+  border-radius: var(--btn_border_radius);
+  background-color: var(--btn_hover_bg);
+  padding: var(--btn_padding_y) var(--btn_padding_x);
+  font-weight: var(--btn_font_weight);
+  font-family: var(--btn_font_family);
+  font-size: var(--btn_font_size);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--btn-transition);
+  letter-spacing: var(--btn_letter_spacing);
+}
+
+.uiverse-btn::before {
+  content: "";
+  background-color: var(--btn_bg);
+  position: absolute;
+  inset: 0;
+  transition: var(--btn-transition);
+  pointer-events: none;
+}
+
+.uiverse-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.uiverse-btn:hover {
+  color: var(--btn_hover_text_color);
+  box-shadow: inset 0 0 0 var(--btn_border_width) var(--btn_border_color);
+}
+
+.uiverse-btn:hover::before {
+  transform: scaleX(0.75);
+  opacity: 0;
+}
